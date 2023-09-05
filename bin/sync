@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+rsync -avzP \
+    --exclude=.git \
+    --exclude=config/defines.inc.php \
+    --exclude=app/config/parameters.php \
+    --exclude=var/cache/ \
+    --exclude=/tmp/ \
+    -e ssh debian@141.95.165.184:/var/www/www.mazharia.fr/ .
