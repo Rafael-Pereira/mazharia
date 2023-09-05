@@ -1,10 +1,11 @@
 #!/usr/bin/env sh
 
 rsync -avzP \
-    --include="themes/*" \
-    --include="templates/*" \
-    --include="mails/*" \
-    --include="modules/*" \
-    --include="override/*" \
+    --include="themes/***" \
+    --include="templates/***" \
+    --include="mails/***" \
+    --include="modules/***" \
+    --include="override/***" \
     --exclude="*" \
+    --exclude=cache \
     -e ssh . debian@141.95.165.184:/var/www/www.mazharia.fr/
