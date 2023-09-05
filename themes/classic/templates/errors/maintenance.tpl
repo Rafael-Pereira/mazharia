@@ -28,16 +28,11 @@
 {block name='body_class'}maintenance{/block}
 
 {block name='content'}
-	<header>
-		<h1><b>Mazharia</b></h1>
-		<p>06 11 75 38 75</p>
-		<p>contact@mazharia.fr</p>
-	</header>
 
-{*  <section id="main">
 
+  <section id="main">
     {block name='page_header_container'}
-      <header class="page-header">
+      {*<header class="page-header">
         {block name='page_header_logo'}
         <div class="logo"><img src="{$shop.logo}" alt="logo" loading="lazy"></div>
         {/block}
@@ -49,7 +44,12 @@
         {block name='page_header'}
           <h1>{block name='page_title'}{l s='We\'ll be back soon.' d='Shop.Theme.Global'}{/block}</h1>
         {/block}
-      </header>
+      </header>*}
+        <header>
+            <h1><b>Mazharia</b></h1>
+            <p>06 11 75 38 75</p>
+            <p>contact@mazharia.fr</p>
+        </header>
     {/block}
 
     {block name='page_content_container'}
@@ -64,7 +64,7 @@
 
     {/block}
 
-  </section>*}
+  </section>
 
 {/block}
 
