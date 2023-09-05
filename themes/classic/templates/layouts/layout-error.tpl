@@ -24,9 +24,7 @@
  *}
 <!doctype html>
 <html lang="">
-
-  <head>
-    <meta charset="utf-8">
+<meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     {block name='head_seo'}
@@ -44,11 +42,39 @@
       {include file="_partials/stylesheets.tpl" stylesheets=$stylesheets}
     {/block}
 
+{literal}
+    <style type="text/css">
+        .maintenance {
+            margin: 0;
+        }
+        .maintenance *
+        {
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .maintenance header
+        {
+            height: 100vh;
+            background:  url('/themes/classic/bg-maintenance.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+        }
+    </style>
+{/literal}
+
+
   </head>
 
-  <body>
+  <body class="{block name='body_class'}{/block}">
 
-    <div id="layout-error">
+    <div id="{*layout-error*}">
       {block name='content'}
         <p>Hello world! This is HTML5 Boilerplate.</p>
       {/block}

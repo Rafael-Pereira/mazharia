@@ -22,11 +22,19 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
+
 {extends file='layouts/layout-error.tpl'}
 
-{block name='content'}
+{block name='body_class'}maintenance{/block}
 
-  <section id="main">
+{block name='content'}
+	<header>
+		<h1><b>Mazharia</b></h1>
+		<p>06 11 75 38 75</p>
+		<p>contact@mazharia.fr</p>
+	</header>
+
+{*  <section id="main">
 
     {block name='page_header_container'}
       <header class="page-header">
@@ -56,6 +64,7 @@
 
     {/block}
 
-  </section>
+  </section>*}
 
 {/block}
+
