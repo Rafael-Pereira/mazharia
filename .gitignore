@@ -199,3 +199,8 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
+
+# DS Store
+templates/bundles/.DS_Store
+themes/.DS_Store
+themes/classic/.DS_Store
