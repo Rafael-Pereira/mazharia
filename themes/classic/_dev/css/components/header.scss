@@ -3,8 +3,7 @@
   position: relative;
   z-index: 999;
   color: $gray;
-  background: $white;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.11);
+  background: red;
 
   .logo {
     max-width: 100%;
@@ -38,7 +37,6 @@
 
   .header-nav {
     max-height: 50px;
-    border-bottom: $gray-light 2px solid;
 
     #menu-icon {
       margin: 0 1rem;
