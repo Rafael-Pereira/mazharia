@@ -11,6 +11,10 @@ body {
   direction: ltr;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 ul {
@@ -38,17 +42,18 @@ label .color,
 .variant-links .color,
 .custom-checkbox input[type="checkbox"] + span.color {
   display: inline-block;
-  width: 1.125rem;
-  height: 1.125rem;
+  width: 1.525rem;
+  height: 1.525rem;
   margin: 0.3125rem;
   margin-right: 0.5rem;
   cursor: pointer;
   background-size: contain;
   border: 1px solid $radio-border-color;
+  border-radius: 50%;
 
   &.active,
   &:hover {
-    border: 2px solid $gray-darker;
+    border: 2px solid $gray-light;
   }
 }
 
@@ -83,6 +88,28 @@ label .color,
     margin-right: $small-space;
   }
 }
+
+
+.btn {
+
+  &-inline {
+    border-radius: 40px;
+    border-width: 1px;
+    border-style: solid;
+    background: transparent !important;
+
+    &--white {
+      border-color: $white;
+      color: $white !important;
+
+      &:hover,
+      &:focus {
+        background: $brand-primary;
+      }
+    }
+  }
+}
+
 
 .btn-tertiary {
   @extend .btn-secondary;
@@ -621,4 +648,13 @@ input[type="number"] {
 
 .ui-autocomplete.ui-front {
   z-index: 999;
+}
+
+
+.jumbotron {
+  h1 {
+    font-size: 3em;
+    margin: 2em 0 1em;
+  }
+
 }

@@ -11,12 +11,11 @@
     display: block;
     padding: 0.625rem;
     font-weight: 400;
-    color: $gray;
   }
 
   a.dropdown-submenu {
     font-weight: 600;
-    color: $gray-darker;
+    color: $white;
     text-transform: uppercase;
   }
 
@@ -24,6 +23,9 @@
     padding: $small-space;
     font-size: 1rem;
     font-weight: 600;
+    color: $white;
+    @include transition();
+
 
     &:hover {
       #header & {

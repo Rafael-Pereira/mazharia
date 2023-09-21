@@ -1,6 +1,10 @@
+.page-index #wrapper {
+  background: transparent;
+}
+
 #wrapper {
   padding-top: 1.563rem;
-  background: $gray-lighter;
+  background: $white;
 
   .banner {
     display: block;

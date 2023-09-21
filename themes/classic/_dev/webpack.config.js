@@ -41,6 +41,7 @@ let config = {
   resolve: {
     preferRelative: true,
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {

@@ -1,12 +1,16 @@
-.dropdown {
-  color: $gray;
+.dropdown, {
+  color: $gray !important;
+
+  a {
+    color: $gray !important;
+  }
 
   &:hover .expand-more {
-    color: $brand-primary;
+    color: $white;
   }
 
   .expand-more {
-    color: $gray-darker;
+    color: $white;
     cursor: pointer;
     user-select: none;
   }
@@ -29,7 +33,7 @@
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-  color: $brand-primary;
+  color: $brand-primary !important;
   text-decoration: none;
   background: none;
 }

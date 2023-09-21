@@ -17,7 +17,7 @@
   }
 
   a {
-    color: $gray-darker;
+    color: $white;
 
     &:hover {
       color: $brand-primary;
@@ -165,7 +165,7 @@
     }
 
     a[data-depth="0"] {
-      color: $gray;
+      color: $white;
       text-transform: uppercase;
     }
 

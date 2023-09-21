@@ -30,7 +30,7 @@
         <span class="expand-more">{$current_language.name_simple}</span>
         <i class="material-icons expand-more">&#xE5C5;</i>
       </button>
-      <ul class="dropdown-menu hidden-sm-down" aria-labelledby="language-selector-label">
+      <ul class="dropdown dropdown-menu hidden-sm-down" aria-labelledby="language-selector-label">
         {foreach from=$languages item=language}
           <li {if $language.id_lang == $current_language.id_lang} class="current" {/if}>
             <a href="{url entity='language' id=$language.id_lang}" class="dropdown-item" data-iso-code="{$language.iso_code}">{$language.name_simple}</a>

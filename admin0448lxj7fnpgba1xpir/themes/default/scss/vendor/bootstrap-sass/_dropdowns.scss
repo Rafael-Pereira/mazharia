@@ -154,7 +154,7 @@
   padding: 3px 20px;
   font-size: $font-size-small;
   line-height: $line-height-base;
-  color: $dropdown-header-color;
+  color: $dropdown-header-color !i;
 }
 
 // Backdrop to catch body clicks on mobile, etc.

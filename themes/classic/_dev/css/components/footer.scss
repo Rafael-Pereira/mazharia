@@ -1,5 +1,8 @@
 #footer {
-  padding-top: 2.5rem;
+  padding-top: 5.5rem;
+  background-image: url("../img/bg-footer.jpg");
+  background-size: cover;
+  background-position: top center;
 }
 
 #blockEmailSubscription_displayFooterBefore {
@@ -10,10 +13,10 @@
 
 .block-contact {
   font-size: 0.875rem;
-  color: $gray;
+  color: $white;
 
   .block-contact-title {
-    color: $gray-darker;
+    color: $white;
   }
 
   .navbar-toggler .material-icons {
@@ -30,7 +33,7 @@
 
 .linklist {
   .blockcms-title a {
-    color: $gray-darker;
+    color: $white;
   }
 }
 
@@ -162,7 +165,7 @@
 
 #block_myaccount_infos {
   .myaccount-title a {
-    color: $gray-darker;
+    color: $white;
   }
 }
 
@@ -199,6 +202,7 @@
   .h4 {
     margin-bottom: 1rem;
     font-size: 1rem;
+    color: $white;
   }
 
   li {
@@ -207,7 +211,7 @@
 
   li a {
     font-size: $font-size-sm;
-    color: $gray;
+    color: $white;
     cursor: pointer;
 
     &:hover {
@@ -255,7 +259,7 @@
           border-bottom: 1px solid $white;
 
           a {
-            color: $gray-darker;
+            color: $white;
           }
         }
       }

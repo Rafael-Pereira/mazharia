@@ -57,12 +57,16 @@
         {/block}
 
         {hook h="displayWrapperTop"}
-        <div class="container">
+            {if $page.page_name == 'index'}
+            <div class="container-fluid toto">
+            {else}
+            <div class="container">
+            {/if}
           {block name='breadcrumb'}
             {include file='_partials/breadcrumb.tpl'}
           {/block}
 
-          <div class="row">
+          <div class="row g-0">
             {block name="left_column"}
               <div id="left-column" class="col-xs-12 col-md-4 col-lg-3">
                 {if $page.page_name == 'product'}

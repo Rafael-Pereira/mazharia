@@ -65,6 +65,7 @@
       </div>
     {/block}
 
+   {* Erreur Ajax sur le On backOrder
     {block name='product_availability'}
       <span id="product-availability" class="js-product-availability">
         {if $product.show_availability && $product.availability_message}
@@ -79,6 +80,7 @@
         {/if}
       </span>
     {/block}
+    *}
 
     {block name='product_minimal_quantity'}
       <p class="product-minimal-quantity js-product-minimal-quantity">

@@ -35,6 +35,7 @@
   font-size: $font-size-lg;
   color: $gray-darker;
 
+
   .manufacturer-logo {
     max-height: 4rem;
     margin-bottom: 1rem;
@@ -42,6 +43,8 @@
   }
 
   .product-description {
+    border-bottom: $gray-light 2px solid;
+
     img {
       max-width: 100%;
       height: auto;
@@ -265,7 +268,7 @@
 }
 
 .tabs {
-  padding: $medium-space $large-space;
+  //padding: $medium-space $large-space;
   margin-top: 2rem;
   background: $white;
 
