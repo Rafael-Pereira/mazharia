@@ -72,9 +72,19 @@
                 <p class="cart-products-count">{l s='There is %products_count% item in your cart.' sprintf=['%products_count%' =>$cart.products_count] d='Shop.Theme.Checkout'}</p>
               {/if}
               <p><span class="label">{l s='Subtotal:' d='Shop.Theme.Checkout'}</span>&nbsp;<span class="subtotal value">{$cart.subtotals.products.value}</span></p>
-              {if $cart.subtotals.shipping.value}
-                <p><span>{l s='Shipping:' d='Shop.Theme.Checkout'}</span>&nbsp;<span class="shipping value">{$cart.subtotals.shipping.value} {hook h='displayCheckoutSubtotalDetails' subtotal=$cart.subtotals.shipping}</span></p>
-              {/if}
+
+              <div class="alert alert-success">
+                {if $language.iso_code =="fr"}Calcul des frais de port par devis
+                {elseif $language.iso_code =="en"}Calculate shipping costs per quote
+                {/if}
+              </div>
+
+              {* Hack for Carrier Quote *}
+             {* {if $cart.subtotals.shipping.value}
+                <p><span>{l s='Shipping:' d='Shop.Theme.Checkout'}</span>&nbsp;<span class="shipping value">
+                    {$cart.subtotals.shipping.value} {hook h='displayCheckoutSubtotalDetails' subtotal=$cart.subtotals.shipping}
+                  </span></p>
+              {/if}*}
 
               {if !$configuration.display_prices_tax_incl && $configuration.taxes_enabled}
                 <p><span>{$cart.totals.total.label}{if $configuration.display_taxes_label}&nbsp;{$cart.labels.tax_short}{/if}</span>&nbsp;<span>{$cart.totals.total.value}</span></p>

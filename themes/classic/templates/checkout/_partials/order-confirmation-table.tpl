@@ -112,7 +112,9 @@
       <hr>
 
       <table>
-        {foreach $subtotals as $subtotal}
+          {* Hack for Carrier Quote *}
+         {*
+         {foreach $subtotals as $subtotal}
           {if $subtotal !== null && $subtotal.type !== 'tax' && $subtotal.label !== null}
             <tr>
               <td>{$subtotal.label}</td>
@@ -120,6 +122,9 @@
             </tr>
           {/if}
         {/foreach}
+        *}
+          {* Hack for Carrier Quote *}
+
 
         {if !$configuration.display_prices_tax_incl && $configuration.taxes_enabled}
           <tr>

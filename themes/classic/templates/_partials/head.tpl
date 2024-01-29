@@ -63,6 +63,9 @@
     <meta property="og:description" content="{$page.meta.description}" />
     <meta property="og:url" content="{$urls.current_url}" />
     <meta property="og:site_name" content="{$shop.name}" />
+    <meta property="og:image" content="/themes/classic/assets/css/logo-mazharia-fb.jpg" />
+
+
     {if !isset($product) && $page.page_name != 'product'}<meta property="og:type" content="website" />{/if}
   {/block}  
 {/block}
@@ -74,6 +77,12 @@
 {block name='head_icons'}
   <link rel="icon" type="image/vnd.microsoft.icon" href="{$shop.favicon}?{$shop.favicon_update_time}">
   <link rel="shortcut icon" type="image/x-icon" href="{$shop.favicon}?{$shop.favicon_update_time}">
+{/block}
+
+{block name='font'}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 {/block}
 
 {block name='stylesheets'}

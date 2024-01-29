@@ -6,14 +6,29 @@
         <div class="row">
           <div class="col-md-12">
 
+            {* Hack for Carrier Quote *}
+            <div class="alert alert-success">
+              <b>
+                {if $language.iso_code =="fr"}
+                  Les frais de port seront calculés par nos équipes.<br/>Nous allons vous contactez avec un bon de commande les intégrant.
+                {elseif $language.iso_code =="en"}
+                  Shipping costs will be calculated by our team.<br/>We'll get back to you with an order form incorporating them.
+                {/if}
+              </b>
+            </div>
+
+            {* Hack for Carrier Quote *}
+            {*
             {block name='order_confirmation_header'}
               <h3 class="h1 card-title">
                 <i class="material-icons rtl-no-flip done">&#xE876;</i>{l s='Your order is confirmed' d='Shop.Theme.Checkout'}
               </h3>
             {/block}
+            *}
 
+            {* Hack for Carrier Quote *}
             <p>
-              {l s='An email has been sent to your mail address %email%.' d='Shop.Theme.Checkout' sprintf=['%email%' => $order_customer.email]}
+              {* {l s='An email has been sent to your mail address %email%.' d='Shop.Theme.Checkout' sprintf=['%email%' => $order_customer.email]}*}
               {if $order.details.invoice_url}
                 {* [1][/1] is for a HTML tag. *}
                 {l

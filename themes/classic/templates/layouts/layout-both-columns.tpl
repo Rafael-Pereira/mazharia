@@ -58,7 +58,7 @@
 
         {hook h="displayWrapperTop"}
             {if $page.page_name == 'index'}
-            <div class="container-fluid toto">
+            <div class="container-fluid">
             {else}
             <div class="container">
             {/if}
@@ -66,7 +66,7 @@
             {include file='_partials/breadcrumb.tpl'}
           {/block}
 
-          <div class="row g-0">
+          <div class="row" style="">
             {block name="left_column"}
               <div id="left-column" class="col-xs-12 col-md-4 col-lg-3">
                 {if $page.page_name == 'product'}

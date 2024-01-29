@@ -1,33 +1,45 @@
 .top-menu {
   &[data-depth="1"] {
-    margin: 0.625rem;
+    margin: 0.325rem;
   }
 
   &[data-depth="0"] {
     margin-bottom: 0;
+
   }
 
   a:not([data-depth="0"]) {
     display: block;
     padding: 0.625rem;
-    font-weight: 400;
+    font-weight: 700;
   }
 
   a.dropdown-submenu {
     font-weight: 600;
-    color: $white;
+    color: $brand-primary;
     text-transform: uppercase;
   }
 
+
+
   a[data-depth="0"] {
     padding: $small-space;
-    font-size: 1rem;
-    font-weight: 600;
-    color: $white;
+    font-size: .9rem;
+    color: $brand-primary !important;
     @include transition();
 
 
-    &:hover {
+    &:hover, &:focus, &:active {
+    }
+
+    @include media-breakpoint-down(sm) {
+      color: $brand-primary !important;
+    }
+
+
+    &:hover, &:focus, &:active {
+      border-bottom: 1px solid $brand-primary;
+
       #header & {
         color: $brand-primary;
         text-decoration: none;
@@ -38,6 +50,7 @@
   a[data-depth="1"],
   a[data-depth="2"] {
     padding: 0 0.625rem 0.625rem 0;
+    color: $brand-primary;
   }
 
   .collapse {
@@ -51,9 +64,16 @@
     margin-left: 0.9375rem;
     visibility: hidden;
     border: none;
-    box-shadow: 2px 1px 11px 2px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 60px 0 50px;
+    background-image: url("../img/bg-submenu2.png");
+    background-size: 300px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
 
     &.collapse {
       visibility: hidden;
@@ -79,6 +99,14 @@
     max-width: inherit;
     border-radius: 0;
   }
+
+  .current {
+    a[data-depth="0"] {
+      color: $brand-primary !important;
+      background: $white;
+    }
+  }
+
 }
 
 .popover.bs-tether-element-attached-top {

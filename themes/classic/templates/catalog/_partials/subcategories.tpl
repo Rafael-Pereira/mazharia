@@ -24,15 +24,26 @@
  *}
 {if !empty($subcategories)}
   {if (isset($display_subcategories) && $display_subcategories eq 1) || !isset($display_subcategories) }
-    <div id="subcategories" class="card card-block">
-      <h2 class="subcategory-heading">{l s='Subcategories' d='Shop.Theme.Category'}</h2>
 
-      <ul class="subcategories-list">
+<section id="" class="container-fluid" style="margin-bottom: 2em;">
+  <div class="row home-categories">
+    <div class="col-sm-5 home-categories-intro hidden-sm-down">
+      <div style="padding-top: 5em;">
+        <h2 class="section-title text-uppercase text-white">
+          {if $language.iso_code =="fr"}Les collections
+          {elseif $language.iso_code =="en"}Collections
+          {/if}
+        </h2>      {*<h2 class="subcategory-heading">{l s='Subcategories' d='Shop.Theme.Category'}</h2>*}
+      </div>
+    </div>
+    <div class="col-sm-7 home-categories-items">
+      <div class="row">
         {foreach from=$subcategories item=subcategory}
-          <li>
-            <div class="subcategory-image">
-              <a href="{$subcategory.url}" title="{$subcategory.name|escape:'html':'UTF-8'}" class="img">
-                {if !empty($subcategory.image.large.url)}
+            <a href="{$subcategory.url}" title="{$subcategory.name|escape:'html':'UTF-8'}" class="col-xs-6 cat" style="background: url({$subcategory.image.large.url})">
+              <div class="h3">
+                {$subcategory.name|truncate:25:'...'|escape:'html':'UTF-8'}
+              </div>
+              {* {if !empty($subcategory.image.large.url)}
                   <picture>
                     {if !empty($subcategory.image.large.sources.avif)}<source srcset="{$subcategory.image.large.sources.avif}" type="image/avif">{/if}
                     {if !empty($subcategory.image.large.sources.webp)}<source srcset="{$subcategory.image.large.sources.webp}" type="image/webp">{/if}
@@ -44,21 +55,12 @@
                       width="{$subcategory.image.large.width}"
                       height="{$subcategory.image.large.height}"/>
                   </picture>
-                {/if}
-              </a>
-            </div>
-
-            <h5>
-              <a class="subcategory-name" href="{$subcategory.url}">
-                {$subcategory.name|truncate:25:'...'|escape:'html':'UTF-8'}
-              </a>
-            </h5>
-            {if $subcategory.description}
-              <div class="cat_desc">{$subcategory.description|unescape:'html' nofilter}</div>
-            {/if}
-          </li>
+                {/if}*}
+            </a>
         {/foreach}
-      </ul>
+      </div>
     </div>
+  </div>
+</section>
   {/if}
 {/if}

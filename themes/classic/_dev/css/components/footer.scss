@@ -1,8 +1,12 @@
 #footer {
-  padding-top: 5.5rem;
-  background-image: url("../img/bg-footer.jpg");
-  background-size: cover;
-  background-position: top center;
+  padding-top: 1em;
+  background-color: $white;
+  border-top: 1px solid $gray-light-second;
+
+  a {
+    color: $brand-primary;
+  }
+
 }
 
 #blockEmailSubscription_displayFooterBefore {
@@ -13,10 +17,10 @@
 
 .block-contact {
   font-size: 0.875rem;
-  color: $white;
+  color: $brand-primary !important;
 
   .block-contact-title {
-    color: $white;
+    color: $brand-primary;
   }
 
   .navbar-toggler .material-icons {
@@ -33,7 +37,7 @@
 
 .linklist {
   .blockcms-title a {
-    color: $white;
+    color: $brand-primary;
   }
 }
 
@@ -41,7 +45,7 @@
   color: $gray;
 
   &:hover {
-    color: $brand-primary;
+    color: darken($brand-primary, 10%);
   }
 }
 
@@ -58,6 +62,7 @@
 
   ul {
     display: flex;
+    justify-content: start;
 
     @include media-breakpoint-down(sm) {
       flex-flow: wrap;
@@ -65,11 +70,11 @@
 
     li {
       display: inline-block;
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
       margin: 0.125rem;
       cursor: pointer;
-      background-color: $gray-light;
+      background-color: transparent;
       background-repeat: no-repeat;
 
       @include media-breakpoint-down(sm) {
@@ -81,7 +86,7 @@
       }
 
       &:hover {
-        background-color: $brand-primary;
+
       }
 
       a {
@@ -165,7 +170,7 @@
 
 #block_myaccount_infos {
   .myaccount-title a {
-    color: $white;
+    color: $brand-primary;
   }
 }
 
@@ -195,14 +200,15 @@
 }
 
 .footer-container {
-  padding-top: $extra-large-space;
+  padding-top: $large-space;
+  padding-bottom: $large-space;
   overflow: hidden;
 
   .h3,
   .h4 {
     margin-bottom: 1rem;
     font-size: 1rem;
-    color: $white;
+    color: $brand-primary;
   }
 
   li {
@@ -211,11 +217,11 @@
 
   li a {
     font-size: $font-size-sm;
-    color: $white;
+    color: $brand-primary;
     cursor: pointer;
 
     &:hover {
-      color: $brand-primary;
+      color: darken($brand-primary, 10%);
     }
   }
 }
@@ -251,7 +257,7 @@
 
       ul {
         margin-bottom: 0;
-        background-color: $gray-lighter;
+       /* background-color: $gray-lighter;*/
 
         > li {
           padding: 0.625rem;

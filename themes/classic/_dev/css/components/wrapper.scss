@@ -1,12 +1,20 @@
 .page-index #wrapper {
-  background: transparent;
+  margin-top: 88vh;
+  padding: 15px 0 !important; ;
+  border-top: none;
 }
 
 #wrapper {
-  padding-top: 1.563rem;
+  padding: 5rem 0 ;
   background: $white;
+  border-top: 1px solid $gray-light-second;
 
-  .banner {
+  @include media-breakpoint-down(sm) {
+    padding: .5em;
+  }
+
+
+    .banner {
     display: block;
     margin-bottom: 1.5rem;
   }

@@ -21,8 +21,17 @@
   }
 }
 
+.category-id-parent-1 .block-category {
+  padding:0;
+  margin-bottom: 0;
+}
+
 .block-category {
-  min-height: 13.75rem;
+
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+/*  min-height: 13.75rem;*/
   margin-bottom: 1.563rem;
 
   h1 {
@@ -34,7 +43,18 @@
     display: flex;
     justify-content: space-between;
 
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 2em;
+    }
+
+
     #category-description {
+
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+
       p,
       strong {
         font-weight: 400;
@@ -54,8 +74,8 @@
 
     .category-cover {
       img {
-        width: 141px;
-        height: 180px;
+        width: 450px;
+        height: auto;
       }
     }
   }

@@ -24,7 +24,14 @@
               </a>
               {if $node.children|count}
               <div {if $depth === 0} class="popover sub-menu js-sub-menu collapse"{else} class="collapse"{/if} id="top_sub_menu_{$_expand_id}">
-                {menu nodes=$node.children depth=$node.depth parent=$node}
+                  {menu nodes=$node.children depth=$node.depth parent=$node}
+                  {if $node.image_urls|count}
+                      <div class="menu-images-container"> TOTOTO
+                          {foreach from=$node.image_urls item=image_url}
+                              <img src="{$image_url}">
+                          {/foreach}
+                      </div>
+                  {/if}
               </div>
               {/if}
             </li>

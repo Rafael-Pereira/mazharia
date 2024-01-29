@@ -30,26 +30,35 @@
 
 {block name='header_nav'}
   <nav class="header-nav">
-    <div class="container">
-      <div class="row">
-        <div class="hidden-sm-down">
+    <div class="container-fluid">
+      <div class="row" >
+        <div class="hidden-sm-down" style="display: flex; align-items:stretch">
           <div class="col-md-5 col-xs-12">
             {hook h='displayNav1'}
           </div>
-          <div class="col-md-2 hidden-sm-down" id="_desktop_logo">
-            {if $shop.logo_details}
-              {if $page.page_name == 'index'}
-                <h1>
+          <div class="header_logo col-sm-2"  >
+            <div class="hidden-sm-down" id="_desktop_logo">
+              {if $shop.logo_details}
+                {if $page.page_name == 'index'}
+                  <h1>
+                    {renderLogo}
+                  </h1>
+                {else}
                   {renderLogo}
-                </h1>
-              {else}
-                {renderLogo}
+                {/if}
               {/if}
-            {/if}
+            </div>
           </div>
-          <div class="col-md-5 right-nav">
+          <div class="col-md-5 right-nav" >
+            <div class="right-nav-extra">
               {hook h='displayNav2'}
+            </div>
           </div>
+        </div>
+
+
+
+          <div class="clearfix"></div>
         </div>
         <div class="hidden-md-up text-sm-center mobile">
           <div class="float-xs-left" id="menu-icon">
@@ -67,9 +76,9 @@
 
 {block name='header_top'}
   <div class="header-top">
-    <div class="container">
-       <div class="row">
-        <div class="header-top-right col-md-12 col-sm-12 position-static">
+    <div class="container-fluid">
+       <div class="row w-100">
+        <div class="header-top-right col-md-12 col-sm-12 position-static hidden-sm-up">
           {hook h='displayTop'}
         </div>
       </div>

@@ -1,3 +1,23 @@
+#index  {
+  #_desktop_logo img{
+    display: none !important;
+  }
+
+  .header_logo:before {
+    content: "";
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 250px);
+    background-image: url("../img/logo-mazharia-desktop.png");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+}
+
+
 
 #header {
   position: relative;
@@ -11,13 +31,19 @@
   }
 
   #_desktop_logo {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+
     h1 {
       margin-bottom: 0;
     }
   }
 
   a {
-    color: $white;
+    color: $brand-primary;
 
     &:hover {
       color: $brand-primary;
@@ -45,13 +71,30 @@
 
       .material-icons {
         line-height: 50px;
+
+        @include media-breakpoint-down(sm) {
+          color: $brand-primary;
+        }
+      }
+    }
+
+    .header_logo {
+
+      .logo{
+        max-width: 220px !important;
       }
     }
 
     .right-nav {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: flex-end;
+
+      &-extra {
+        padding-top: 17px;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: end;
+      }
+
     }
 
     .currency-selector {
@@ -61,34 +104,62 @@
     }
 
     .user-info {
-      margin-top: 0.9375rem;
-      margin-left: 2.5rem;
       text-align: right;
       white-space: nowrap;
+      display: flex;
+      align-items: center;
+
+      .logout {
+        padding-top: 7px;
+      }
 
       .account {
         margin-left: $small-space;
+        font-size: .9em;
+        padding-top: 5px;
+
+
+
+        span {
+          display: block;
+          max-width: 100px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+
+
       }
     }
 
     .language-selector {
       margin-top: 0.9375rem;
       white-space: nowrap;
+
+      button {
+        background: transparent;
+      }
+
+      img {
+        width: 18px;
+      }
     }
 
     .cart-preview {
       &.active {
-        background: $brand-primary;
+        background: transparent;
 
         a,
         i {
-          color: $white;
+          color: $brand-primary;
         }
       }
 
       .shopping-cart {
-        color: $gray;
+        color: $brand-primary;
         vertical-align: middle;
+
       }
 
       .body {
@@ -98,14 +169,13 @@
 
     .blockcart {
       height: 3rem;
-      padding: 0.75rem;
-      margin-left: 0.9375rem;
+      padding: 0.55rem;
       text-align: center;
       white-space: nowrap;
-      background: $gray-light;
+      position: relative;
 
       a {
-        color: $gray;
+        color: $brand-primary !important;
 
         &:hover {
           color: $brand-primary;
@@ -114,12 +184,31 @@
 
       &.active {
         a:hover {
-          color: $white;
+          color: $brand-primary;
         }
       }
 
       .header {
         margin-top: 0.125rem;
+        display: flex;
+        justify-content: right;
+      }
+
+      .cart-products-count {
+        position: absolute;
+        height: 25px;
+        min-width: 25px;
+        border-radius: 50px;
+        color: $white;
+        background: $brand-primary;
+        padding: 8px;
+        top: -4px;
+        right: -4px;
+        font-weight: 900;
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 
@@ -145,7 +234,11 @@
   }
 
   .header-top {
-    padding: 1.25rem 0;
+    padding: 2.8rem 0 0;
+
+    @include media-breakpoint-down(sm) {
+      padding:0;
+    }
 
     > .container {
       position: relative;
@@ -162,6 +255,8 @@
 
     .position-static {
       position: static;
+      display: flex;
+      justify-content: center;
     }
 
     a[data-depth="0"] {

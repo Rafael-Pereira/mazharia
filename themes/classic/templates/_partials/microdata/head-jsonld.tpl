@@ -60,7 +60,7 @@
       {if $shop.logo_details}
         "image": {
           "@type": "ImageObject",
-          "url":"{$shop.logo_details.src}"
+          "url":"/themes/classic/assets/css/logo-mazharia-fb.jpg"
         },
       {/if}
       "potentialAction": {

@@ -39,12 +39,24 @@
           <span class="value">
             {if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}
           </span>
-          {if $subtotal.type === 'shipping'}
-              <div><small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small></div>
-          {/if}
+
+
+
+         {* Hack for Carrier Quote *}
+         {if $subtotal.type === 'shipping'}
+            {* <div><small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small></div> *}
+         {/if}
         </div>
       {/if}
     {/foreach}
+
+      {* Hack for Carrier Quote *}
+      <div class="alert alert-success">
+          {if $language.iso_code =="fr"}Calcul des frais de port par devis
+          {elseif $language.iso_code =="en"}Calculate shipping costs per quote
+          {/if}
+      </div>
+
   </div>
 
   {block name='cart_summary_totals'}

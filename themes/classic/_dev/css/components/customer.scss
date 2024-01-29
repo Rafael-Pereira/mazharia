@@ -364,23 +364,25 @@
         padding: 0 0.9375rem;
         margin-bottom: 1.875rem;
         font-size: $base-font-size;
-        font-weight: 700;
         color: $gray;
         text-align: center;
-        text-transform: uppercase;
+        @include transition();
 
         span.link-item {
           display: block;
           height: 100%;
+          border: 1px solid $brand-primary;
+          border-radius: 8px;
           @include customer-area-base-box();
         }
 
         i {
           display: block;
           width: 100%;
-          padding-bottom: 3.4rem;
-          font-size: 2.6rem;
-          color: $gray-darker;
+          padding-top: 1rem;
+          padding-bottom: 3rem;
+          font-size: 1.8rem;
+          color: $gray;
         }
 
         &:hover {

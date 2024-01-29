@@ -23,7 +23,8 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 <div id="js-product-list-top" class="row products-selection">
-  <div class="col-lg-5 hidden-sm-down total-products">
+{*Masquer la ligne de Filtre des produits *}
+ {* <div class="col-lg-5 hidden-sm-down total-products">
     {if $listing.pagination.total_items > 1}
       <p>{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
     {elseif $listing.pagination.total_items > 0}
@@ -42,7 +43,7 @@
           </button>
         </div>
       {/if}
-    </div>
+    </div>*}
   </div>
   <div class="col-sm-12 hidden-md-up text-sm-center showing">
     {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[

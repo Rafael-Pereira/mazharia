@@ -59,12 +59,12 @@
           {/if}
         {/block}
 
-        <div class="highlighted-informations{if !$product.main_variants} no-variants{/if}">
-          {block name='quick_view'}
-            <a class="quick-view js-quick-view" href="#" data-link-action="quickview">
-              <i class="material-icons search">&#xE8B6;</i> {l s='Quick view' d='Shop.Theme.Actions'}
-            </a>
-          {/block}
+          {*<div class="highlighted-informations{if !$product.main_variants} no-variants{/if}">
+            {block name='quick_view'}
+              <a class="quick-view js-quick-view" href="#" data-link-action="quickview">
+                <i class="material-icons search">&#xE8B6;</i> {l s='Quick view' d='Shop.Theme.Actions'}
+              </a>
+            {/block}
 
           {block name='product_variants'}
             {if $product.main_variants}
@@ -72,7 +72,7 @@
             {/if}
           {/block}
         </div>
-      </div>
+      </div>*}
 
       <div class="product-description">
         {block name='product_name'}
@@ -83,8 +83,9 @@
           {/if}
         {/block}
 
-        {block name='product_price_and_shipping'}
-          {if $product.show_price}
+     {* Cacher le prix dans les pages categories *}
+       {* {block name='product_price_and_shipping'}
+               {if $product.show_price}
             <div class="product-price-and-shipping">
               {if $product.has_discount}
                 {hook h='displayProductPriceBlock' product=$product type="old_price"}
@@ -113,7 +114,7 @@
               {hook h='displayProductPriceBlock' product=$product type='weight'}
             </div>
           {/if}
-        {/block}
+        {/block}*}
 
         {block name='product_reviews'}
           {hook h='displayProductListReviews' product=$product}

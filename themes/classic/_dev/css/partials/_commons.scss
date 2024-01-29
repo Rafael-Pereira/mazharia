@@ -1,20 +1,29 @@
+
+
 body,
 html {
   height: 100%;
 }
 
 body {
-  font-family: Manrope, sans-serif;
+  @font-face {
+    font-family: 'MyWebFont';
+    src:  url('../font/AvenirRegular.woff2') format('woff2')
+  }
+
   font-size: $base-font-size;
   line-height: 1.25em;
   color: $gray-darker;
   direction: ltr;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("../img/bg.jpg");
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
+
+  &.page-index {
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
 }
 
 ul {
@@ -25,6 +34,11 @@ ul {
 a:hover {
   color: $brand-primary;
   text-decoration: none;
+}
+
+a:focus, a:active,
+button:focus, button:active {
+  outline: none !important;
 }
 
 p {
@@ -650,11 +664,60 @@ input[type="number"] {
   z-index: 999;
 }
 
-
-.jumbotron {
-  h1 {
-    font-size: 3em;
-    margin: 2em 0 1em;
+// HOME GRID Categorie
+.home-categories {
+  display: flex;
+  align-items: stretch;
+  @include media-breakpoint-down(sm) {
+    display: block;
   }
 
+  h2 {
+    text-align: center;
+    font-size: 2.5em;
+  }
+
+  &-intro {
+    background-image: url("../img/collection.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: auto;
+
+    h3 {
+      text-align: center;
+      font-size: 1.8em;
+    }
+  }
+
+  &-items {
+
+    .cat {
+      padding-top: 50%;
+      background-size: cover !important;
+      background-position: center bottom !important;
+      position: relative;
+      opacity: 1;
+      @include transition(.3);
+
+      &:hover {
+        opacity: .8;
+      }
+
+      div {
+        left: 17px;
+        bottom: -10px;
+        color: $white;
+        transform: rotate(-90deg);
+        transform-origin: top left;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.pro-only {
+  padding-left: 15px;
+  display: inline;
+  font-size: .7em;
 }
